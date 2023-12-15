@@ -1,0 +1,58 @@
+
+<div class="moneySt">
+    <div class="head">
+        <h5>Money Statistics</h5>
+        <div class="icn">
+            <select name="" id="" class="form-control" type="dropdown">
+                <option value="">Monthly</option>
+            </select>
+            <i class="fa-solid fa-ellipsis"></i>
+        </div>
+    </div>
+    <div class="statistics">
+        <div class="income">
+            <h6>Total Income</h6>
+            <h3>{{moneyStatistic.total_income.value | currency:'USD'}}</h3>
+            
+            <span>
+                <small [ngClass]="
+                {
+                    'text-success' : moneyStatistic.total_income.trend >= 16,
+                    'text-danger' : moneyStatistic.total_income.trend <= 15
+                }">
+                <i class="fa-solid fa-chart-line"></i>
+                +{{moneyStatistic.total_income.trend}}%</small> 
+                from last month</span>
+        </div>
+        <div class="expense">
+            <h6>Total Expense</h6>
+            <h3>{{moneyStatistic.total_expense.value | currency:'USD'}}</h3>
+            
+            <span>
+                <small [ngClass]="
+                {
+                    'text-danger' : moneyStatistic.total_expense.trend <= 15,
+                    'text-success' : moneyStatistic.total_expense.trend > 16
+                }">
+                <i class="fa-solid fa-chart-line"></i>
+                +{{moneyStatistic.total_expense.trend}}% </small>
+                 from last month</span>
+        </div>
+        <div class="invest">
+            <h6>Total Investment</h6>
+            <h3>{{moneyStatistic.total_investment.value | currency:'USD'}}</h3>
+            
+            <span>
+                <small [ngClass]="
+                {
+                    'text-danger' : moneyStatistic.total_investment.trend <= 15,
+                    'text-success' : moneyStatistic.total_investment.trend > 20
+                }">
+                <i class="fa-solid fa-chart-line"></i>
+                +{{moneyStatistic.total_investment.trend}}%</small>
+                 from last month</span>
+        </div>
+    </div>
+
+    <div id="container"></div>
+</div>

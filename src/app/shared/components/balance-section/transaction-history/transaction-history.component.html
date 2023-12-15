@@ -1,0 +1,65 @@
+<div class="newHead">
+<div class="transHistory">
+    <div>
+        <h5>Transaction History</h5>
+    </div>
+    <div class="transHead">
+        <input type="text" name="txtBox" placeholder="Search anything here...">
+    <button>
+        <i class="fa-solid fa-arrow-down-short-wide"></i>
+        <span>Filter</span>
+    </button>
+    <button>
+        <i class="fa-solid fa-file-arrow-down"></i>
+        <span>Export</span>
+    </button>
+    </div>
+</div>
+<div class="tble">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date
+                    <i class="fa-solid fa-sort"></i>
+                </th>
+                <th>Name
+                    <i class="fa-solid fa-sort"></i>
+                </th>
+                <th>Status
+                    <i class="fa-solid fa-sort"></i>
+                </th>
+                <th>Type
+                    <i class="fa-solid fa-sort"></i>
+                </th>
+                <th>Time
+                    <i class="fa-solid fa-sort"></i>
+                </th>
+                <th>Amount
+                    <i class="fa-solid fa-sort"></i>
+                </th>
+                <th>Action
+                    <i class="fa-solid fa-sort"></i>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let trans of transactions">
+                <th>{{trans.date | date}}</th>
+                <th>{{trans.name}}</th>
+                <th
+                [ngClass]="
+                {
+                    'text-success' :trans.status === 'Success',
+                    'text-warning' :trans.status === 'Pending',
+                    'text-danger' :trans.status === 'Failed'
+                }"
+                >{{trans.status}}</th>
+                <th>{{trans.type}}</th>
+                <th>{{trans.date | date:'shortTime' }}</th>
+                <th>{{trans.amount | currency :'USD'}}</th>
+                <th><i class="fa-solid fa-ellipsis"></i></th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

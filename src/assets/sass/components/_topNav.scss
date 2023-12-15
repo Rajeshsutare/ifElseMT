@@ -1,0 +1,33 @@
+.overview{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 60px;
+   background-color: $color-white;
+   padding: 15px;
+    border-radius: 15px;
+    span{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .icons{
+        button{
+            width: 50px;
+            margin-right: 20px;
+            padding: 5px;
+            border-radius: 7px;
+            background-color:$color-white;
+            border :0.2px solid rgba(0,0,0,0.1) ;
+        }
+    }
+    input{    
+        background: url("https://cdn-icons-png.flaticon.com/512/3031/3031293.png") left no-repeat;
+        height:35px;
+        background-size: 20px;
+        padding-left: 30px;
+        width: 400px;
+        border-radius: 8px;
+        border: none;
+        background-color: $color-grey-light-2;
+        }
+}

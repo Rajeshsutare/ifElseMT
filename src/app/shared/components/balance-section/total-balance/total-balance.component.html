@@ -1,0 +1,16 @@
+<div class="paymentSec">
+    <div class="head">
+        <h5>Total Balance</h5>
+        <i class="fa-solid fa-ellipsis"></i>
+    </div>
+    <h2>
+       {{totalBalance.total_balance | currency: 'USD'}}
+    </h2>
+    <div>
+        <progress id="file" value="32" max="100" > 50% </progress>
+        <div class="progrs">
+            <small for="file">Monthly Payment Limit</small>
+            <small><strong>${{totalBalance.payment_done_so_far}}</strong>/ {{totalBalance.monthly_payment_limit}}</small>
+        </div>
+    </div>
+</div>

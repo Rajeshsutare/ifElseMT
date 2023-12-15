@@ -1,0 +1,46 @@
+
+@mixin imp-d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.moneySt{
+    width: 100%;
+    background-color:  $color-white;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    .head{
+        @include imp-d-flex()
+    }
+    .icn{
+        align-items: center;
+        i{
+            margin-left: 20px;
+        }
+    }
+    .statistics{
+       @include imp-d-flex();
+        margin-top: 30px;
+    }
+
+    #container{
+        height: 350px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .highcharts-title, .highcharts-axis-title, .highcharts-credits{
+        display: none;
+    }
+
+    .highcharts-color-0 path[fill], .highcharts-color-0 rect[fill] {
+     
+        fill:rgba(0,0,0,.1);
+    }
+    .highcharts-color-1 path[fill], .highcharts-color-1 rect[fill]{
+        fill:$color-gray2;
+    }
+    .highcharts-color-2 path[fill], .highcharts-color-2 rect[fill]{
+        fill:$color-gray3;
+    }
+
+}

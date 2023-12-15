@@ -1,0 +1,15 @@
+
+.paymentSec{
+    width: 100%;
+    background-color:  $color-white;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px
+}
+.head, .progrs{
+    display: flex;
+    justify-content: space-between;
+}
+progress{
+    width: 100%;
+}
